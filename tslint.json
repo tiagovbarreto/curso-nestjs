@@ -1,0 +1,10 @@
+{
+    "defaultSeverity": "error",
+    "tslint.autoFixOnSave": true,
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": []
+}
