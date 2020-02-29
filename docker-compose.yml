@@ -11,5 +11,5 @@ services:
         ports:
             - 3000:3000
         working_dir: /ws/backend
-        entrypoint: sh -c 'npm install;tail -f'
+        entrypoint: sh -c 'tail -f'
     
