@@ -5,7 +5,7 @@ volumes:
 
 services: 
     backend:
-        image: node:13.8.0-alpine3.11
+        image: node:12.16.1-alpine
         volumes:
             - .:/ws
         ports:
