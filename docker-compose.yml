@@ -3,13 +3,28 @@ volumes:
     data:
         name: data
 
-services: 
-    backend:
-        image: node:12.16.1-alpine
-        volumes:
-            - .:/ws
-        ports:
-            - 3000:3000
-        working_dir: /ws/backend
-        entrypoint: sh -c 'tail -f'
+services:
+
+  db:
+    image: postgres:9.6
+    volumes:
+    #Volume dos dados
+    - data:/var/lib/postgresql/data
+    #Scripts
+    #- ./scripts:/scripts
+    #- ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+    - 5432:5432
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+
+  backend:
+    image: node:12.16.1-alpine
+    volumes:
+    - .:/ws
+    ports:
+    - 3000:3000
+    working_dir: /ws/backend
+    entrypoint: sh -c 'tail -f'
     
