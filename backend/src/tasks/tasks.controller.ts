@@ -38,4 +38,3 @@ export class TasksController {
     return this.tasksService.getDeleteTask(id);
   }
 }
-

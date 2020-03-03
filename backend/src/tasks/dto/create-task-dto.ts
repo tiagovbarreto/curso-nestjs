@@ -1,6 +1,5 @@
 import { IsNotEmpty, IsOptional, IsIn } from "class-validator";
 import { TaskStatus } from "../task-status.enum";
-import { Optional } from "@nestjs/common";
 
 export class CreateTaskDTO {
   @IsNotEmpty()
