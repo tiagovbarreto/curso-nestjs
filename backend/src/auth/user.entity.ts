@@ -5,15 +5,12 @@ import {
   Column,
 } from 'typeorm';
 
-@Entity()
+@Entity("user_account")
 export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column({ unique: true })
-  email: string;
-
-  @Column()
   username: string;
 
   @Column()
