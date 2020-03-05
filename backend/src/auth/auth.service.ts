@@ -4,12 +4,15 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { AuthCredentialsDTO } from './dto/auth-credentials.dto';
 import * as bcrypt from "bcrypt";
 import { User } from './user.entity';
+import { JwtService } from '@nestjs/jwt';
+import { JwtPayload } from './jwt-payload.interface';
 
 @Injectable()
 export class AuthService {
   constructor(
   	@InjectRepository(UserRepository)
-    private userRepository: UserRepository
+    private userRepository: UserRepository,
+    private jwtService: JwtService
   ){}
 
   async signUp(authCredentialsDTO: AuthCredentialsDTO): Promise <void> {
@@ -26,7 +29,7 @@ export class AuthService {
     return await this.userRepository.singUp(authCredentialsDTO);
   }
 
-  async signIn(authCredentialsDTO: AuthCredentialsDTO){
+  async signIn(authCredentialsDTO: AuthCredentialsDTO): Promise <{ accessToken: string }>{
 
     const { username, password } = authCredentialsDTO;
 
@@ -39,6 +42,11 @@ export class AuthService {
     if(!validPassword){
       throw new UnprocessableEntityException("Invalid user name or password. Please try again.");
     }
+
+    const payload: JwtPayload = { username };  
+    const accessToken = this.jwtService.sign(payload);
+
+    return { accessToken }
 
   }
 
