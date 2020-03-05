@@ -8,8 +8,14 @@ export class AuthController {
     constructor(
         private authService: AuthService 
     ){}
+
     @Post("/signup")
     singUp(@Body(ValidationPipe) authCredentialsDTO: AuthCredentialsDTO): Promise <void>{
        return this.authService.signUp(authCredentialsDTO)
     };
+
+    @Post("/signin")
+    signIn(@Body(ValidationPipe) AuthCredentialsDTO: AuthCredentialsDTO): Promise <void> {
+        return this.authService.signIn(AuthCredentialsDTO);
+    }
 }
