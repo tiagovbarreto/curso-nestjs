@@ -50,7 +50,6 @@ export class AuthService {
 
   }
 
-
   private async hashPassword(password: string) {
     const salt = await bcrypt.genSalt();
     const hashedPassword = await bcrypt.hash(password, salt);

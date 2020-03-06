@@ -3,7 +3,9 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
+  OneToMany,
 } from 'typeorm';
+import { Task } from 'src/tasks/task.entity';
 
 @Entity("user_account")
 export class User extends BaseEntity {
@@ -15,4 +17,7 @@ export class User extends BaseEntity {
 
   @Column()
   password: string;
+
+  @OneToMany(type => Task, task => task.user, { eager: true })
+  tasks: Task[];
 }
