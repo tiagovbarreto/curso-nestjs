@@ -1,13 +1,13 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query, UsePipes, ValidationPipe, ParseIntPipe, UseGuards, createParamDecorator} from "@nestjs/common";
-import { CreateTaskDTO } from "src/tasks/dto/create-task-dto";
-import { TasksFilterDTO } from "src/tasks/dto/task-filter-dto";
-import { TaskStatus } from "src/tasks/task-status.enum";
+import { CreateTaskDTO } from "../tasks/dto/create-task-dto";
+import { TasksFilterDTO } from "../tasks/dto/task-filter-dto";
+import { TaskStatus } from "../tasks/task.status.enum";
 import { TaskStatusValidationPipe } from "./pipes/tasks.status.validation.pipes";
 import { TasksService } from "./tasks.service";
 import { Task } from "./task.entity";
 import { AuthGuard } from "@nestjs/passport";
-import { GetUser } from "src/auth/get-user.decorator";
-import { User } from "src/auth/user.entity";
+import { GetUser } from "../auth/get-user.decorator";
+import { User } from "../auth/user.entity";
 
 @Controller("tasks")
 @UseGuards(AuthGuard())
@@ -18,8 +18,7 @@ export class TasksController {
   public getTasks(
     @GetUser() user: User,
     @Query(ValidationPipe) filterDTO: TasksFilterDTO): Promise <Task[]> {
-    filterDTO.user = user;
-    return this.tasksService.getTasks(filterDTO);
+    return this.tasksService.getTasks(filterDTO, user);
   }
 
   @Get("/:id")

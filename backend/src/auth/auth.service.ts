@@ -1,11 +1,11 @@
-import { Injectable, BadRequestException, UnprocessableEntityException } from '@nestjs/common';
-import { UserRepository } from './user.repository';
+import { Injectable, UnprocessableEntityException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { AuthCredentialsDTO } from './dto/auth-credentials.dto';
-import * as bcrypt from "bcrypt";
-import { User } from './user.entity';
 import { JwtService } from '@nestjs/jwt';
 import { JwtPayload } from './jwt-payload.interface';
+import * as bcrypt from "bcryptjs";
+import { User } from './user.entity';
+import { UserRepository } from './user.repository';
+import { AuthCredentialsDTO } from './dto/auth-credentials.dto';
 
 @Injectable()
 export class AuthService {

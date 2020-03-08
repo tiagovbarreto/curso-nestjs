@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsOptional, IsIn } from "class-validator";
-import { TaskStatus } from "../task-status.enum";
-import { User } from "src/auth/user.entity";
+import { TaskStatus } from "../task.status.enum";
+import { User } from "../../auth/user.entity";
 
 export class CreateTaskDTO {
   @IsNotEmpty()
