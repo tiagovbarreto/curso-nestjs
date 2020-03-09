@@ -10,9 +10,7 @@ services:
     volumes:
     #Volume dos dados
     - data:/var/lib/postgresql/data
-    #Scripts
-    #- ./scripts:/scripts
-    #- ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    - ./db-scripts/:/docker-entrypoint-initdb.d/
     ports:
     - 5432:5432
     environment:
