@@ -8,11 +8,11 @@ To setup the environment follow the steps bellow:
 
 3) Access the containers:
 
-a) To access the backend container run the command: docker-compose exec backend /bin/sh
+4) To access the backend container run the command: docker-compose exec backend /bin/sh
 
 - To start the application run the command: yarn start:dev
 
-b) To access the db container run the command: docker-compose exec db /bin/sh
+5) To access the db container run the command: docker-compose exec db /bin/sh
 
 - To access the database run the commands:
 
@@ -20,7 +20,7 @@ b) To access the db container run the command: docker-compose exec db /bin/sh
       - psql
       - \c taskmanagement
 
--) To run tests, stop the application and run the command (no need to stop the container): yarn test 
+6) To run tests, stop the application and run the command (no need to stop the container): yarn test 
 
 
 PS:. You must install docker (https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt)  and docker-compose (https://docs.docker.com/compose/install/)
