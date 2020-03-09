@@ -17,3 +17,6 @@ To setup the environment follow the steps bellow:
       - \c taskmanagement
 
 4) To run tests, stop the application and run the command (no need to stop the container): yarn test 
+
+
+PS:. You must intall docker (https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt)  and docker-compose (https://docs.docker.com/compose/install/)
