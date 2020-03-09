@@ -7,10 +7,10 @@ import { User } from "../auth/user.entity";
 @EntityRepository(Task)
 export class TaskRepository extends Repository <Task>{
 
-    async createTask(createTaskDTO: CreateTaskDTO): Promise <Task>{
+    async createTask(createTaskDTO: CreateTaskDTO, user: User): Promise <Task>{
         const { description, status, title } = createTaskDTO;
         const task = new Task();
-        task.user = createTaskDTO.user;
+        task.user = user;
         task.title = title;
         task.description = description;
         task.status = status;

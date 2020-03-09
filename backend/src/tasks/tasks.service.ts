@@ -18,7 +18,7 @@ export class TasksService {
     return await this.taskRepository.getTasks(filterDTO, user);
   }
 
-  public async getTaskById(id: number, user: User): Promise<Task> {
+  public async getTaskById(id: number, user): Promise<Task> {
     const found = await this.taskRepository.findOne({ where: {id, userId: user.id }});
 
     if (!found) {
@@ -28,12 +28,12 @@ export class TasksService {
     return found;
   }
 
-  public async createTask(createTaskDTO: CreateTaskDTO): Promise<Task> {
+  public async createTask(createTaskDTO: CreateTaskDTO, user): Promise<Task> {
     createTaskDTO.status = TaskStatus.OPEN;
-    return await this.taskRepository.createTask(createTaskDTO);
+    return await this.taskRepository.createTask(createTaskDTO, user);
   }
 
-  public async updateTaskStatus(id: number, status: TaskStatus, user: User): Promise<Task> {
+  public async updateTaskStatus(id: number, status: TaskStatus, user): Promise<Task> {
     const task: Task = await this.getTaskById(id, user);
 
     if (!task) {
@@ -46,7 +46,7 @@ export class TasksService {
     return task;
   }
 
-  public async getDeleteTask(id: number, user: User): Promise<void> {
+  public async deleteTask(id: number, user): Promise<void> {
     const result = await this.taskRepository.delete({ id, userId: user.id});
 
     if (result.affected === 0) {

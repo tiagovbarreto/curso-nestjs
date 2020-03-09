@@ -33,8 +33,7 @@ export class TasksController {
   public createTask(
     @GetUser() user: User,
     @Body() createTaskDTO: CreateTaskDTO): Promise <Task> {
-    createTaskDTO.user = user;
-    return this.tasksService.createTask(createTaskDTO);
+    return this.tasksService.createTask(createTaskDTO, user);
   }
 
   @Patch("/:id/status")
@@ -49,6 +48,6 @@ export class TasksController {
   public deleteTask(
     @GetUser() user: User,
     @Param("id", ParseIntPipe) id: number): Promise <void> {
-    return this.tasksService.getDeleteTask(id, user);
+    return this.tasksService.deleteTask(id, user);
   }
 }
