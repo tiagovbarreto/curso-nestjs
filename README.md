@@ -37,8 +37,10 @@ $ psql
 $ \c taskmanagement
 ```
 
-### Now if you want to run tests, use the command bellow (no need to stop the container):
+### Do you want to run tests?
+- Run the commands bellow:
 ```sh
+$ docker-compose exec backend /bin/sh
 $ yarn test
 ```
 
