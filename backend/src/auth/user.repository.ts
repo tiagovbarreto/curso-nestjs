@@ -7,7 +7,7 @@ export class UserRepository extends Repository<User> {
   async singUp(authCredentialsDTO: AuthCredentialsDTO): Promise<void> {
     const { password, username } = authCredentialsDTO;
 
-    const user: User = new User();
+    const user: User = this.create();
     user.password = password;
     user.username = username;
 
