@@ -7,12 +7,12 @@ You must install [docker](https://www.digitalocean.com/community/tutorials/como-
 
 - Clone the repository in your workstation
 
-- Go to the project folder and run the command:
+- Go to the project folder (curso-nestjs) and run the command:
 ```sh
 $ docker-compose up
 ```
 ### After setup the environment you can access the containers:
-
+#### backend container
 - To access the backend container run the command: 
 ```sh
 $ docker-compose exec backend /bin/sh
@@ -22,9 +22,12 @@ $ docker-compose exec backend /bin/sh
 ```sh
 $ yarn start:dev
 ```
-yarn start:dev
+#### db container
 
-- To access the db container run the command: docker-compose exec db /bin/sh
+- To access the db container run the command:
+```sh
+$ docker-compose exec db /bin/sh
+```
 
 - To access the database run the commands:
 
