@@ -26,7 +26,8 @@ export class AuthService {
 
     authCredentialsDTO.password = await this.hashPassword(password);
 
-    return await this.userRepository.singUp(authCredentialsDTO);
+    return await this.userRepository.signUp(authCredentialsDTO);
+
   }
 
   async signIn(authCredentialsDTO: AuthCredentialsDTO): Promise <{ accessToken: string }>{
@@ -37,13 +38,13 @@ export class AuthService {
     if(!user){
       throw new UnprocessableEntityException("Invalid user name or password. Please try again.");
     }
-    
+
     const validPassword = await bcrypt.compare(password, user.password);
     if(!validPassword){
       throw new UnprocessableEntityException("Invalid user name or password. Please try again.");
     }
 
-    const payload: JwtPayload = { username };  
+    const payload: JwtPayload = { username };
     const accessToken = this.jwtService.sign(payload);
 
     return { accessToken }

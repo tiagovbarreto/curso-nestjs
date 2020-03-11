@@ -2,7 +2,6 @@ import { Test } from "@nestjs/testing";
 import { UserRepository } from "./user.repository";
 import { AuthCredentialsDTO } from "./dto/auth-credentials.dto";
 import { User } from "./user.entity";
-import { TaskRepository } from "src/tasks/task.repository";
 
 describe('UserRepository', () => {
 
@@ -27,7 +26,7 @@ describe('UserRepository', () => {
 
             expect(mockUser.save).not.toHaveBeenCalled();
             expect(userRepository.create).not.toHaveBeenCalled();
-            expect(userRepository.singUp(mockAuthCredentialsDTO)).resolves.not.toThrow();
+            expect(userRepository.signUp(mockAuthCredentialsDTO)).resolves.not.toThrow();
             expect(mockUser.save).toHaveBeenCalled();
             expect(userRepository.create).toHaveBeenCalled();
 
