@@ -1,5 +1,6 @@
 # The project
-This is a small and simple project that offers an API to manage tasks. The intention to do this project was to understand how a project could be done using [NestJS](https://nestjs.com/) with Typescript in the backend.
+
+This is a small and simple project that offers an API to manage tasks. The intention of doing it was to understand how to develop the backend architecture using NestJS with Typescript.
 
 The knowledge was acquired in Ariel Weinberger's NestJS Course. The objective of the course was to develop and deploy back-end enterprise applications following best practices using Node.js and TypeScript.
 
