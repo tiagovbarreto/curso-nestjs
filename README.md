@@ -6,7 +6,7 @@ The knowledge was acquired in Ariel Weinberger's NestJS Course. The objective of
 
 Thank you a lot Ariel!
 
-# Thecnical setup
+# Technical setup
 
 ### First off all
 You must install [docker](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt)  and [docker-compose](https://docs.docker.com/compose/install/).
