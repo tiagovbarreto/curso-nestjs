@@ -1,4 +1,11 @@
-# curso-nestjs
+# The project
+This is a small and simple project that offers an API to manage tasks. The intention to do this project was to understand how a project could be done using [NestJS](https://nestjs.com/) with Typescript in the backend.
+
+The knowledge was acquired in Ariel Weinberger's NestJS Course. The objective of the course was to develop and deploy back-end enterprise applications following best practices using Node.js and TypeScript.
+
+Thank you a lot Ariel!
+
+# Thecnical setup
 
 ### First off all
 You must install [docker](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt)  and [docker-compose](https://docs.docker.com/compose/install/).
