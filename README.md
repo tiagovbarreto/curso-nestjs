@@ -15,7 +15,7 @@ You must install [docker](https://www.digitalocean.com/community/tutorials/como-
 
 - Clone the repository in your workstation
 
-- Go to the project folder (curso-nestjs) and run the command:
+- Go to the project folder and run the command:
 ```sh
 $ docker-compose up
 ```
