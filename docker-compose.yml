@@ -1,27 +1,26 @@
 version: "3.7"
 volumes:
-    data:
-        name: data
+  data:
+    name: data
 
 services:
-
   db:
     image: postgres:9.6
     volumes:
-    - data:/var/lib/postgresql/data
-    - ./db-scripts/:/docker-entrypoint-initdb.d/
+      - data:/var/lib/postgresql/data
+      - ./db-scripts/:/docker-entrypoint-initdb.d/
     ports:
-    - 5432:5432
+      - 5432:5432
     environment:
-    - POSTGRES_USER=postgres
-    - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
 
   backend:
-    image: node:12.16.1-alpine
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     volumes:
-    - .:/ws
+      - /app/node_modules
+      - ./backend:/app
     ports:
-    - 3000:3000
-    working_dir: /ws/backend
-    entrypoint: sh -c 'apk add yarn && yarn install;tail -f'
-    
+      - 3000:3000
