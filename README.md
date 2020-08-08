@@ -23,7 +23,7 @@ $ docker-compose up
 #### running containers
 - To see running containers run the command: 
 ```sh
-$ docker ps or $ docker-compose container ls
+$ docker ps or docker container ls or $ docker-compose ps
 ```
 
 #### backend container
