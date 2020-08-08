@@ -20,21 +20,23 @@ You must install [docker](https://www.digitalocean.com/community/tutorials/como-
 $ docker-compose up
 ```
 ### After setup the environment you can access the containers:
+#### running containers
+- To see running containers run the command: 
+```sh
+$ docker ps or $ docker-compose container ls
+```
+
 #### backend container
 - To access the backend container run the command: 
 ```sh
-$ docker-compose exec backend /bin/sh
+$ docker exec -it <container id> /bin/sh or $ docker-compose exec backend /bin/sh
 ```
 
-- To start the application run the command: 
-```sh
-$ yarn start:dev
-```
 #### db container
 
 - To access the db container run the command:
 ```sh
-$ docker-compose exec db /bin/sh
+$ docker exec -it <container id> /bin/sh or $ docker-compose exec db /bin/sh
 ```
 
 - To access the database run the commands:
@@ -51,5 +53,9 @@ $ \c taskmanagement
 $ docker-compose exec backend /bin/sh
 $ yarn test
 ```
-
+### Do you want to see swagger?
+- Acesse above url:
+```sh
+http://localhost:3000/api
+```
 
