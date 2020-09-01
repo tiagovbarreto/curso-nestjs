@@ -8,10 +8,10 @@ Thank you a lot Ariel!
 
 # Startup
 
-### First off all
+## First off all
 You must install [docker](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt)  and [docker-compose](https://docs.docker.com/compose/install/) and [yarn](https://linuxize.com/post/how-to-install-yarn-on-ubuntu-18-04/).
 
-### After install docker and docker-compose you can setup the environment following the steps bellow:
+## After install docker and docker-compose you can setup the environment following the steps bellow:
 
 - Clone the repository in your workstation
 
@@ -19,20 +19,20 @@ You must install [docker](https://www.digitalocean.com/community/tutorials/como-
 ```sh
 $ docker-compose up
 ```
-## Docker and docker-compose commands
-#### running containers
+# Docker and docker-compose commands
+## running containers
 - To see running containers run the command: 
 ```sh
 $ docker ps or docker container ls or $ docker-compose ps
 ```
 
-#### backend container
+## backend container
 - To access the backend container run the command: 
 ```sh
 $ docker exec -it <container id> /bin/sh or $ docker-compose exec backend /bin/sh
 ```
 
-#### db container
+## db container
 
 - To access the db container run the command:
 ```sh
@@ -47,14 +47,14 @@ $ psql
 $ \c taskmanagement
 ```
 
-### Do you want to run tests?
+## Do you want to run tests?
 - Run the commands bellow:
 ```sh
 $ docker-compose exec backend /bin/sh
 $ yarn test
 ```
 
-### Do you want to see swagger?
+## Do you want to see swagger?
 - Acesse the url below:
 ```sh
 http://localhost:3000/api
