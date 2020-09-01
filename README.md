@@ -14,6 +14,9 @@ You must install [docker](https://www.digitalocean.com/community/tutorials/como-
 ## Run app:
 
 - Clone the repository in your workstation
+```sh
+git clone https://github.com/tiagovbarreto/tasks-nestjs.git
+```
 
 - Go to the project folder and run the command:
 ```sh
