@@ -6,7 +6,7 @@ The knowledge was acquired in Ariel Weinberger's NestJS Course. The objective of
 
 Thank you a lot Ariel!
 
-# Technical setup
+# Startup
 
 ### First off all
 You must install [docker](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt)  and [docker-compose](https://docs.docker.com/compose/install/) and [yarn](https://linuxize.com/post/how-to-install-yarn-on-ubuntu-18-04/).
@@ -19,7 +19,7 @@ You must install [docker](https://www.digitalocean.com/community/tutorials/como-
 ```sh
 $ docker-compose up
 ```
-### After setup the environment you can access the containers:
+## Docker and docker-compose commands
 #### running containers
 - To see running containers run the command: 
 ```sh
