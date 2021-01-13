@@ -8,7 +8,7 @@ A small and simple project that offers an API to manage tasks.
 * [Startup](#startup)
 * [Tests](#tests)
 * [Documentation](#documentation)
-* [Usefull commands](#usefull)
+* [Usefull commands](#usefull-commands)
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
@@ -19,7 +19,7 @@ The intention of doing this project was to understand how to develop the backend
 ## Features
 List of features ready and TODOs for future development
 * Signup
-* Singin
+* Signin
 * Signout
 * Create task
 * Update task
