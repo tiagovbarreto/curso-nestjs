@@ -18,6 +18,9 @@ The intention of doing this project was to understand how to develop the backend
 
 ## Features
 List of features ready and TODOs for future development
+* Signup
+* Singin
+* Signout
 * Create task
 * Update task
 * Delete task
