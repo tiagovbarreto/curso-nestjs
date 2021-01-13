@@ -27,9 +27,11 @@ To-do list:
 * Create the frontend web application
 
 ## Technologies
-* NESTJS - https://nestjs.com/
+* NestJS - https://nestjs.com/
 * Node - https://nodejs.org/en/
 * Typescript - https://www.typescriptlang.org/
+* Jest - https://jestjs.io/
+* Swagger - https://swagger.io/
 * PostgresSQL - https://www.postgresql.org/
 * Docker - https://www.docker.com/
 * Docker Compose - https://docs.docker.com/compose/install/
