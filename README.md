@@ -60,11 +60,13 @@ $ docker-compose up
 $ docker-compose exec backend /bin/sh
 $ yarn test
 ```
+
 ## Documentation
-### To access swagger:
+### To access swagger
 ```sh
 http://localhost:3000/api
 ```
+
 ## Usefull commands
 ### To see running containers
 ```sh
