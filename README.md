@@ -8,7 +8,7 @@ A small and simple project that offers an API to manage tasks.
 * [Startup](#startup)
 * [Tests](#tests)
 * [Documentation](#documentation)
-* [Usefull Commands](#usefull)
+* [Usefull commands](#usefull)
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
@@ -50,35 +50,33 @@ $ docker-compose up
 ```
 
 ## Tests
-### Run tests
-- Run the commands bellow:
+### To run tests
 ```sh
 $ docker-compose exec backend /bin/sh
 $ yarn test
 ```
 ## Documentation
-### Access swagger?
-- Acesse the url below:
+### To access swagger:
 ```sh
 http://localhost:3000/api
 ```
 ## Usefull commands
-### To see running containers run the command: 
+### To see running containers
 ```sh
 $ docker ps or docker container ls or $ docker-compose ps
 ```
 
-### To access the backend container run the command: 
+### To access the backend container
 ```sh
 $ docker exec -it <container id> /bin/sh or $ docker-compose exec backend /bin/sh
 ```
 
-### To access the db container run the command:
+### To access the db container
 ```sh
 $ docker exec -it <container id> /bin/sh or $ docker-compose exec db /bin/sh
 ```
 
-### To access the database run the commands:
+### To access the database
 
 ```sh
 $ su postgres
