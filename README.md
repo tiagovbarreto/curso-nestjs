@@ -1,10 +1,76 @@
-# The project
+# Project Name
+> Here goes your awesome project description!
+
+## Table of contents
+* [About](#about)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Startup](#startup)
+* [Tests](#tests)
+* [Documentation](#documentation)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
+
+## About
 
 This is a small and simple project that offers an API to manage tasks. The intention of doing it was to understand how to develop the backend architecture using NestJS with Typescript.
 
-The knowledge was acquired in Ariel Weinberger's NestJS Course. The objective of the course was to develop and deploy back-end enterprise applications following best practices using Node.js and TypeScript.
+## Features
+List of features ready and TODOs for future development
+* Awesome feature 1
+* Awesome feature 2
+* Awesome feature 3
+
+To-do list:
+* Wow improvement to be done 1
+* Wow improvement to be done 2
+
+## Technologies
+* Tech 1 - version 1.0
+* Tech 2 - version 2.0
+* Tech 3 - version 3.0
+
+## Startup
+
+### Tools
+You must install [docker](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt)  and [docker-compose](https://docs.docker.com/compose/install/) and [yarn](https://linuxize.com/post/how-to-install-yarn-on-ubuntu-18-04/).
+
+### Clone the repository
+```sh
+git clone https://github.com/tiagovbarreto/tasks-nestjs.git
+```
+
+### Start project
+```sh
+$ docker-compose up
+```
+## Tests
+### Run tests
+- Run the commands bellow:
+```sh
+$ docker-compose exec backend /bin/sh
+$ yarn test
+```
+## Documentation
+### Access swagger?
+- Acesse the url below:
+```sh
+http://localhost:3000/api
+```
+
+## Status
+Project is: _finished_
+
+## Inspiration
+The knowledge was acquired in Ariel Weinberger's NestJS Course. The objective of the course was to develop and deploy back-end enterprise applications following best practices using NestJS, Node.js and TypeScript.
 
 Thank you a lot Ariel!
+
+## Contact
+Created by tiagovalentim@gmail.com - feel free to contact me!
+
+
 
 # Startup
 
