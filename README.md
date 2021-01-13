@@ -41,49 +41,48 @@ To-do list:
 
 ## Startup
 
-### Tools
+#### Tools
 You must install [docker](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt)  and [docker-compose](https://docs.docker.com/compose/install/) and [yarn](https://linuxize.com/post/how-to-install-yarn-on-ubuntu-18-04/).
 
-### Clone the repository
+#### Clone the repository
 ```sh
 git clone https://github.com/tiagovbarreto/tasks-nestjs.git
 ```
 
-### Start project
+#### Start project
 ```sh
 $ docker-compose up
 ```
 
 ## Tests
-### To run tests
+#### To run tests
 ```sh
-$ docker-compose exec backend /bin/sh
-$ yarn test
+$ docker-compose exec backend yarn test
 ```
 
 ## Documentation
-### To access swagger
+#### To access swagger
 ```sh
 http://localhost:3000/api
 ```
 
 ## Usefull commands
-### To see running containers
+#### To see running containers
 ```sh
 $ docker ps or docker container ls or $ docker-compose ps
 ```
 
-### To access the backend container
+#### To access the backend container
 ```sh
 $ docker exec -it <container id> /bin/sh or $ docker-compose exec backend /bin/sh
 ```
 
-### To access the db container
+#### To access the db container
 ```sh
 $ docker exec -it <container id> /bin/sh or $ docker-compose exec db /bin/sh
 ```
 
-### To access the database
+#### To access the database
 
 ```sh
 $ su postgres
