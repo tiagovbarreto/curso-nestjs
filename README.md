@@ -3,7 +3,6 @@ A small and simple project that offers an API to manage tasks.
 
 ## Table of contents
 * [About](#about)
-* [Inspiration](#inspiration)
 * [Features](#features)
 * [Technologies](#technologies)
 * [Startup](#startup)
@@ -15,11 +14,6 @@ A small and simple project that offers an API to manage tasks.
 
 ## About
 The intention of doing this project was to understand how to develop the backend architecture using NestJS, Node and Typescript.
-
-## Inspiration
-The knowledge was acquired in Ariel Weinberger's NestJS Course. The objective of the course was to develop and deploy back-end enterprise applications following best practices using NestJS, Node.js and TypeScript.
-
-Thank you a lot Ariel!
 
 ## Features
 List of features ready and TODOs for future development
